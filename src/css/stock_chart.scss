@@ -1,0 +1,414 @@
+/*
+
+font-family: 'Gothic A1', sans-serif; 200 400 600
+font-family: 'Orbit', sans-serif;
+
+*/
+
+@mixin flexCCC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexCCCC {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexRSC {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+@mixin flexRSBC {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flexRSAC {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+}
+@mixin flexCSAC {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+@mixin flexCSBC {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flexCSS{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+* {
+	font-family: 'Gothic A1', sans-serif;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  @include flexCCC;
+  body{
+    width: 100%;
+    height: 100%;
+    @include flexCCC;
+    background: linear-gradient(161deg, #9db6cf, #dbdecf);
+    .wrap {
+      width: 90%;
+      height: 90%;
+  	  background-color: #ffffff69;
+	    border-radius: 15px;
+	    box-shadow: 8px 17px 18px 0px rgba(0,0,0,0.13);
+	    padding: 20px;
+      @include flexRSBC;
+      .leftWrap {
+	      width: 50%;
+	      height: 100%;
+        @include flexCCCC;
+        .stockIndex {
+          margin-top: -34px;          
+          &>p{
+            color: #fff;
+            text-shadow: 1px 2px 8px rgb(74, 119, 165);
+            font-size: 47px;
+            padding: 11px;
+          }
+        }
+        .realTimeZone {
+	        width: 95%;
+	        height: 90%;
+          box-shadow: 3px 5px 19px 2px rgb(158 183 207 / 39%);
+          overflow: hidden;
+	        background: #fff;
+	        border-radius: 20px;
+          .vPWrap {
+            width: 55%;
+            overflow-y: scroll;
+            padding: 25px;
+            @include flexCSBC;
+            -ms-overflow-style: none; /* 인터넷 익스플로러 */
+            scrollbar-width: none; /* 파이어폭스 */
+          }
+          .vPWrap::-webkit-scrollbar {
+	          display:none; /*크롬, 사파리, 오페라, 엣지*/
+          }
+          .volumePriceWrap {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            .chartBorder {
+              border: 5px solid #ff7b568f;
+              border-radius: 12px;
+              box-shadow: 0px 3px 5px rgba(0,0,0,0.13);
+            }
+            .volPriceZone {
+              width: 100%;
+              @include flexRSAC;
+              padding: 16px;
+              .titleEvent {
+                font-size: 1rem;
+                width: 40%;
+                text-align: right;
+                position: relative;
+                padding: 5px;
+                overflow: hidden;
+                color: rgb(51 51 51 / 80%);
+                .tEventGraph {
+                  background: #8ca3b93b;
+                  width: 50%;
+                  height: 100%;
+                  top:0;
+                  left:0;
+                  position: absolute;
+                }
+              }
+              .tPrice {
+                width: 60%;
+                text-align: center;
+                font-size: 29px;
+              }
+            }
+            .infoWrap {
+              width: 45%;
+              padding: 25px;
+              .upInfoWrap {
+                width:100%;
+                height: 55%;
+                background: linear-gradient(126deg, #9eb7cf, #daddcf);
+                box-shadow: -10px -10px 30px 0 #fff, 10px 10px 30px 0 #aeaec091, inset -10px -10px 10px 0 #aeaec03b, 10px 10px 10px 0 #fff;
+                border-radius: 25px;
+                @include flexCCC;
+                .uIWrap{
+                  width: 70%;
+                  height: 90%;
+                  @include flexCSS;
+                  #sumDeal{
+                    background: #fff;
+                    border-radius: 10px;
+                    padding-top: 6px;
+                    padding-bottom: 4px;
+                    text-shadow: none;
+                    box-shadow: inset 0 5px 5px -1px #0000004f;
+                    @include flexCCCC;
+                    &>span{
+                      color: #304d6a;
+                      margin: 1px;
+                      padding: 1px;
+                    }
+                  }
+                  &>p{
+                    width: 100%;
+                    @include flexRSBC;
+                    font-size: 20px;
+                    color: #fff;
+                    text-shadow: 1px 2px 8px rgb(74 119 165);
+                    &>span{
+                      color: #fff;
+                      &:nth-child(1){
+                        font-weight: 600;
+                      }
+                    }
+                  }
+                }
+              }
+              .downInfoWrap {
+                width:100%;
+                height: 39%;
+                margin-top: 37px;
+                background: linear-gradient(126deg, #9eb7cf, #daddcf);
+                box-shadow: -10px -10px 30px 0 #fff, 10px 10px 30px 0 rgba(174, 174, 192, 0.568627451), inset -10px -10px 10px 0 rgba(174, 174, 192, 0.231372549), 10px 10px 10px 0 #fff;
+                border-radius: 25px;
+                @include flexCCC;
+                .dIWrap {
+                  @include flexCCCC;
+                  width: 90%;
+                  height: 90%;
+                  &>p{
+                    color: #fff;
+                    font-size: 25px;
+                    font-weight: 600;
+                    width: 100%;
+                    height: 20%;
+                    text-align: center;
+                    line-height: 55px;
+                    text-shadow: 1px 2px 8px rgb(74 119 165);
+                  }
+                }
+                .dealZone {
+                  width: 78%;
+                  height: 80%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-start;
+                  align-items: center;
+                  overflow: scroll;
+                  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+                  scrollbar-width: none; /* 파이어폭스 */
+                  &>p{
+                    padding: 13px;
+                    width: 100%;
+                    @include flexRSBC;
+                    font-size: 20px;
+                    color: #fff;
+                    text-shadow: 1px 2px 8px rgb(74 119 165);
+                    &>span{
+                      color: #fff;
+                      &:nth-child(1){
+                        font-weight: 600;
+                      }
+                    }
+                  }
+                }
+                .dealZone::-webkit-scrollbar {
+	                 display:none; /*크롬, 사파리, 오페라, 엣지*/
+                }
+              }
+            }
+          }
+        }
+      }
+      .rightWrap {
+	      width: 50%;
+	      height: 100%;
+        @include flexCSAC;
+        .allPart {
+          width: 95%;
+          height: 45%;
+          box-shadow: 3px 5px 19px 2px rgb(158 183 207 / 39%);
+	        background: #fff;
+	        border-radius: 20px;
+          @include flexCSAC;
+          .allPartTitle {
+	          width: 95%;
+	          height: 10%;
+            margin-top: 25px;
+            margin-bottom: 33px;
+            @include flexCCC;
+            &>span {
+              box-shadow: -10px -9px 22px 0 #fff, 4px 3px 16px 0 rgba(174, 174, 192, 0.568627451), inset -10px -10px 5px 0 rgba(174, 174, 192, 0.231372549), 5px 6px 5px 0 #fff;
+	            font-weight: 600;
+              display: inline-block;
+              width: 21%;
+              margin-left: 2%;
+              margin-right: 2%;
+	            padding: 5px;
+              height: 30px;
+              font-size: 18px;
+              text-align: center;
+	            line-height: 33px;
+	            border-radius: 22px;
+	            background: linear-gradient(161deg, #8ca3b9, #c9ceb4);
+	            color: #fff;
+              text-shadow: 1px 2px 5px rgba(0,0,0,0.2);
+            }
+          }
+          .allPartWrap {
+	          overflow: scroll;
+            padding: 17px;
+            width: 93%;
+            height: 60%;
+            text-align: center;
+	          margin-top: -45px;
+            -ms-overflow-style: none; /* 인터넷 익스플로러 */
+            scrollbar-width: none; /* 파이어폭스 */
+            .allPartStock {
+	            width: 100%;
+	            height: 10%;
+              margin-bottom: 26px;
+	            transition: all 0.2s;
+              border-radius: 25px;
+              @include flexRSBC;
+              padding: 7px;
+              &>span {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                word-break: break-all;
+                display: inline-block;
+                width: 21%;
+                height: 30px;
+                font-size: 18px;
+                text-align: center;
+	              line-height: 30px;
+	              margin-right:10px;
+              }
+            }
+            .aPSBack {
+              background-color: #ffb5a03d;
+              color: #fff;
+              text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.078);
+            }
+            .allPartStock:hover {
+	            background: #f5f5f5;
+	            transition: all 0.2s;
+            }
+            .allPartStock:active {
+	            background: #f0f0f0;
+            }
+            .allPartStock:last-child {
+              margin-bottom: 5px;
+            }
+          }
+          .allPartWrap::-webkit-scrollbar {
+	          display:none; /*크롬, 사파리, 오페라, 엣지*/
+          }
+        }
+        .chartGraphWrap {
+          width: 95%;
+          height: 45%;
+          box-shadow: 3px 5px 19px 2px rgb(158 183 207 / 39%);
+	        background: #fff;
+	        border-radius: 20px;
+          @include flexCCC;
+          .chartGraph {
+            @include flexCSS;
+            width: 84%;
+            height: 90%;
+            .chartColumn {
+              width: 100%;
+              height: 100%;
+              @include flexCCC;
+              .leftChartWrap {
+                width: 100%;
+                height: 95%;
+                overflow-x: scroll;
+                -ms-overflow-style: none; /* 인터넷 익스플로러 */
+                scrollbar-width: none; /* 파이어폭스 */
+                border-bottom: 1px solid #333;
+                border-right: 1px solid #333;
+                .leftChart {
+                  @include flexRSC;
+                  height: 100%;
+                  .graphItem {
+                    height: 100%;
+                    width: 20px;
+                    margin-left: 3px;
+                    position: relative;
+                    .upGraph {
+                      position: absolute;
+                      width: 100%;
+                      height: 50%;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: flex-end;
+                    }
+                  }
+                }
+              }
+              .leftChartWrap::-webkit-scrollbar {
+                display:none; /*크롬, 사파리, 오페라, 엣지*/
+              }
+            }
+            .leftDate{
+              width: 100%;
+              height:10%;
+              overflow-x: scroll;
+              -ms-overflow-style: none; /* 인터넷 익스플로러 */
+              scrollbar-width: none; /* 파이어폭스 */
+              .dateZone{
+                @include flexRSC;
+                height: 100%;
+                &>span{
+                  font-size: 14px;
+                  width:80px;
+                  height:100%;
+                  text-align: left;
+                  margin-right: 15px;
+                  color: #333333b9;
+                }
+              }
+            }
+            .leftDate::-webkit-scrollbar {
+              display:none; /*크롬, 사파리, 오페라, 엣지*/
+            }
+          }
+          .rightIndicator {
+            width: 10%;
+            height: 80%;
+            @include flexCSBC;
+            margin-bottom: 36px;
+            margin-right: -7px;
+            margin-left: 5px;
+            &>p{
+              color: #333;
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

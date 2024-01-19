@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p, span, div {
+  color: #333;
+}
+
+ul li {
+  list-style: none;
+}

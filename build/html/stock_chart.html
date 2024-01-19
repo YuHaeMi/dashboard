@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>주식 차트</title>
+    <link rel="stylesheet" type="text/css" href="../css/stock_chart.css">
+    <link rel="stylesheet" type="text/css" href="../css/stock_chart_mo.css">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;400;600&amp;family=Orbit&amp;display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="../img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="manifest" href="../img/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="leftWrap">
+        <div class="stockIndex" id="stockIndex"> 
+          <p>불러오는중 . .</p>
+        </div>
+        <div class="realTimeZone">
+          <div class="volumePriceWrap">
+            <div class="vPWrap" id="vPWrap">
+              <!--p.volPriceZone.chartBorder
+              span.titleEvent 377
+              	span.tEventGraph
+              span.tPrice 625,000
+              -->
+            </div>
+            <div class="infoWrap">
+              <div class="upInfoWrap" id="upInfoWrap">
+                <div class="uIWrap" id="uIWrap"></div>
+                <!--	p
+                	span 전일 종가
+                	span 636,000
+                p
+                	span 거래대금
+                	span 44억
+                p
+                	span 상한가
+                	span 826,800
+                p
+                	span 하한가
+                	span 446,000
+                p
+                	span 시가
+                	span 620,000
+                p
+                	span 고가
+                	span 625,000
+                p
+                	span 저가
+                	span 612,000
+                -->
+              </div>
+              <div class="downInfoWrap">
+                <div class="dIWrap"> 
+                  <p>거래대금</p>
+                  <div class="dealZone" id="dealZone"></div>
+                  <!--	p
+                  	span 625,000 
+                  	span 1
+                  p
+                  	span 625,000 
+                  	span 2
+                  p
+                  	span 625,000 
+                  	span 2
+                  p
+                  	span 625,000 
+                  	span 2
+                  
+                  -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rightWrap">
+        <div class="allPart" id="allPart">
+          <p class="allPartTitle"><span class="titleEvent">종목명</span><span class="titleUpDown">등락</span><span class="titleVolume">거래량</span><span class="titlePrice">거래가격</span></p>
+          <div class="allPartWrap" id="allPartStockWrap">
+            <!--p.allPartStock
+            span.stockEvent test1
+            span.stockUpDown 0.00%
+            span.stockVolume +-0.00%
+            span.stockPrice 9,509
+            
+            -->
+          </div>
+        </div>
+        <div class="chartGraphWrap">
+          <div class="chartGraph" id="chartGraph">
+            <div class="chartColumn">
+              <div class="leftChartWrap">
+                <div class="leftChart" id="leftChart"></div>
+                <!--	#graphItme.graphItem#upGraph.upGraph
+                -->
+              </div>
+            </div>
+            <div class="leftDate">
+              <div class="dateZone" id="dateZone"></div>
+            </div>
+          </div>
+          <div class="rightIndicator" id="rightIndicator"></div>
+          <!--	p 10000
+          p 10000
+          p 10000
+          p 10000
+          p 10000
+          
+          
+          -->
+        </div>
+      </div>
+    </div>
+    <script src="../../src/js/stock_chart.js"></script>
+  </body>
+</html>
